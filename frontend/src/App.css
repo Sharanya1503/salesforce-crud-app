@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #1f2937;
+}
+
+.app-container {
+  width: 95%;
+  max-width: 1400px;
+  margin: 30px auto;
+}
+
+.app-title {
+  background: #1f4e79;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.controls {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.controls label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+select {
+  padding: 9px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+button {
+  padding: 9px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 8px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.add-button {
+  background: #1f4e79;
+  color: white;
+  margin-top: 15px;
+}
+
+.edit-button {
+  background: #f59e0b;
+  color: white;
+}
+
+.delete-button {
+  background: #dc2626;
+  color: white;
+}
+
+.save-button {
+  background: #16a34a;
+  color: white;
+}
+
+.cancel-button {
+  background: #6b7280;
+  color: white;
+}
+
+.table-container {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #1f4e79;
+  color: white;
+  padding: 12px;
+  text-align: left;
+}
+
+td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+tr:hover {
+  background-color: #f8fafc;
+}
+
+.form-container {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.form-group input {
+  width: 100%;
+  max-width: 500px;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  font-weight: bold;
+}
+
+.empty-message {
+  text-align: center;
+  padding: 30px;
+  color: #6b7280;
+}
+
+.login-status {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
