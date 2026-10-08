@@ -57,7 +57,7 @@ const [editingId, setEditingId] = useState(null);
 const checkLoginStatus = async () => {
   try {
     const response = await fetch(
-      "http://localhost:5000/auth/status",
+      "https://salesforce-crud-app-oohj.onrender.com/auth/status",
       {
         credentials: "include"
       }
@@ -80,7 +80,7 @@ useEffect(() => {
 
   try {
     const response = await fetch(
-      `http://localhost:5000/api/records/${objectName}?offset=0`,
+      `https://salesforce-crud-app-oohj.onrender.com/api/records/${objectName}?offset=0`,
       {
         credentials: "include"
       }
@@ -113,7 +113,7 @@ const loadMoreRecords = async () => {
 
   try {
     const response = await fetch(
-      `http://localhost:5000/api/records/${selectedObject}?offset=${nextOffset}`,
+      `https://salesforce-crud-app-oohj.onrender.com/api/records/${selectedObject}?offset=${nextOffset}`,
       {
         credentials: "include"
       }
@@ -164,7 +164,7 @@ const loadMoreRecords = async () => {
  const createRecord = async () => {
   try {
     const response = await fetch(
-      `http://localhost:5000/api/records/${selectedObject}`,
+      `https://salesforce-crud-app-oohj.onrender.com/api/records/${selectedObject}`,
       {
         method: "POST",
         headers: {
@@ -201,7 +201,7 @@ const loadMoreRecords = async () => {
       const { Id, attributes, ...updateData } = formData;
 
     const response =    await   fetch(
-      `http://localhost:5000/api/records/${selectedObject}/${editingId}`,
+      `https://salesforce-crud-app-oohj.onrender.com/api/records/${selectedObject}/${editingId}`,
       {
         method: "PUT",
         headers: {
@@ -246,7 +246,7 @@ const deleteRecord = async (recordId) => {
 
   try {
     const response = await fetch(
-      `http://localhost:5000/api/records/${selectedObject}/${recordId}`,
+      `https://salesforce-crud-app-oohj.onrender.com/api/records/${selectedObject}/${recordId}`,
       {
         method: "DELETE",
         credentials: "include"
@@ -273,7 +273,7 @@ const deleteRecord = async (recordId) => {
 const logoutFromSalesforce = async () => {
   try {
     const response = await fetch(
-      "http://localhost:5000/auth/logout",
+      "https://salesforce-crud-app-oohj.onrender.com/auth/logout",
       {
         method: "GET",
         credentials: "include"
@@ -316,7 +316,7 @@ setNextOffset(null);
   loadRecords(objectName);
 };
   const loginToSalesforce = () => {
-    window.location.href = "http://localhost:5000/auth/login";
+    window.location.href = "https://salesforce-crud-app-oohj.onrender.com/auth/login";
   };
 
   return (
