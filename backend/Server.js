@@ -9,7 +9,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "http://localhost:5176",
+    origin: "https://salesforce-crud-app-rho.vercel.app",
     credentials: true
   })
 );
