@@ -64,8 +64,11 @@ const checkLoginStatus = async () => {
     );
 
     const data = await response.json();
-
     setLoggedIn(data.loggedIn);
+
+   if (data.loggedIn) {
+      loadRecords("Account");
+   }
   } catch (error) {
     console.error("Login status error:", error);
   }
