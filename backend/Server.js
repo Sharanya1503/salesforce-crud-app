@@ -101,7 +101,7 @@ app.get("/oauth/callback", async (req, res) => {
     );
 
     req.session.salesforce = response.data;
-    res.redirect("https://salesforce-crud-app-rho.vercel.app");
+    res.redirect(process.env.FRONTEND_URL || "http://localhost:5176");
 
   } catch (error) {
     console.log(
