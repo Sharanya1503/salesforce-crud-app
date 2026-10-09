@@ -16,11 +16,19 @@ app.use(
 
 app.use(express.json());
 
+const isProduction = process.env.NODE_ENV === "production";
+
+app.set("trust proxy", 1);
+
 app.use(
   session({
-    secret: "salesforce-crud-secret",
+    secret: process.env.SESSION_SECRET || "salesforce-crud-secret",
     resave: false,
-    saveUninitialized: true
+    saveUninitialized: false,
+    cookie: {
+      secure: isProduction,
+      sameSite: isProduction ? "none" : "lax"
+    }
   })
 );
 
@@ -93,7 +101,7 @@ app.get("/oauth/callback", async (req, res) => {
     );
 
     req.session.salesforce = response.data;
-    res.redirect("http://localhost:5176");
+    res.redirect("https://salesforce-crud-app-rho.vercel.app");
 
   } catch (error) {
     console.log(
